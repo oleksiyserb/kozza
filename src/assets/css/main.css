@@ -1,0 +1,137 @@
+@import "reset";
+@import "_default";
+@import "_global";
+
+.hero {
+  background-image: url(./assets/img/hero.png);
+  height: 533px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 768px) {
+    height: 420px;
+  }
+
+  @media (max-width: 425px) {
+    height: 240px;
+  }
+
+  > .container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__title {
+    font-family: var(--font-secondary);
+    grid-column: 1 / span 6;
+    margin-top: 2.625rem;
+    font-size: 2.8125em;
+
+    @media (max-width: 768px) {
+      grid-column: 1 / span 10;
+    }
+
+    @media (max-width: 425px) {
+      grid-column: 1 / span 12;
+      font-size: 1.71rem;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    bottom: -110px;
+    background-image: url(./assets/img/icons/doodles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 540px;
+    height: 166px;
+    background-size: 100%;
+    z-index: 2;
+
+    @media (max-width: 890px) {
+      bottom: -90px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 370px;
+      height: 114px;
+    }
+
+    @media (max-width: 425px) {
+      width: 320px;
+    }
+
+    > h2 > a {
+      display: flex;
+      align-items: center;
+      color: var(--link);
+      font-family: var(--font-thirdary);
+      font-size: 1.875rem;
+
+      @media (max-width: 890px) {
+        font-size: 1.28rem;
+
+        > svg {
+          width: 80px;
+        }
+      }
+
+      > span {
+        margin-right: 1.5rem;
+        transition: text-shadow 0.2s;
+
+        &:hover {
+          text-shadow: 0px 0px 2px var(--link);
+        }
+      }
+    }
+  }
+}
+
+.about {
+  display: none;
+	padding: 5.5em 0 7.5em;
+	position: relative;
+
+	&__slogan {
+		grid-column: 1 / span 12;
+    display: flex;
+    align-items: flex-end;
+
+		> span {
+			margin-left: 1.625rem;
+			font-size: 1.875rem;
+			font-family: var(--font-primary);
+		}
+	}
+	&__link {
+		grid-column: 1 / span 5;
+		display: inline-block;
+		align-items: center;
+		font-family: var(--font-primary);
+		font-size: 1.875rem;
+		color: hsl(var(--dark));
+
+    > * {
+      display: inherit;
+    }
+
+		> strong {
+			color: var(--link);
+			font-family: var(--font-thirdary);
+		}
+
+		> svg {
+			margin-left: 1.3125em;
+		}
+	}
+
+	&__background {
+		top: -40px;
+		left: 0;
+	}
+}
