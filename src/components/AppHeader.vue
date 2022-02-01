@@ -254,95 +254,95 @@
         </ul>
       </div>
     </div>
-
-    <!-- Modals -->
-    <ModalCart v-if="cart" @close="cart = false" />
-    <ModalSearch v-if="search" @close="search = !search" />
-
-    <ModalAuth
-      title="Реєстрація"
-      submit="Зареєструватися"
-      v-if="showRegister"
-      @close="showRegister = false">
-      <div>
-        <label for="name">Ім'я</label>
-        <input
-          name="name"
-          id="name"
-          type="text"
-          v-model="register.name"
-          required />
-      </div>
-
-      <div>
-        <label for="surname">Прізвище</label>
-        <input
-          name="surname"
-          id="surname"
-          type="text"
-          v-model="register.surname"
-          required />
-      </div>
-
-      <div>
-        <label for="phone">Номер телефону</label>
-        <input
-          class="tel"
-          name="phone"
-          id="phone"
-          type="tel"
-          placeholder="+38 (0ХХ) ХХХ-ХХ-ХХ"
-          v-model="register.phone"
-          required />
-      </div>
-
-      <div>
-        <label for="email">Email</label>
-        <input
-          name="email"
-          id="email"
-          type="email"
-          v-model="register.email"
-          required />
-      </div>
-
-      <div>
-        <label for="password">Пароль</label>
-        <input
-          name="password"
-          id="password"
-          type="password"
-          v-model="register.password"
-          required />
-      </div>
-    </ModalAuth>
-
-    <ModalAuth
-      title="Увійти до кабінету"
-      submit="Увійти"
-      v-if="showLogin"
-      @close="showLogin = false">
-      <div>
-        <label for="email">Логін або email</label>
-        <input
-          name="email"
-          id="email"
-          type="email"
-          v-model="login.emailOrLogin"
-          required />
-      </div>
-
-      <div>
-        <label for="password">Пароль</label>
-        <input
-          name="password"
-          id="password"
-          type="password"
-          v-model="login.password"
-          required />
-      </div>
-    </ModalAuth>
   </header>
+
+  <!-- Modals -->
+  <ModalCart v-if="cart" @close="cart = false" />
+  <ModalSearch v-if="search" @close="search = !search" />
+
+  <ModalAuth
+    title="Реєстрація"
+    submit="Зареєструватися"
+    v-if="showRegister"
+    @close="showRegister = false">
+    <div>
+      <label for="name">Ім'я</label>
+      <input
+        name="name"
+        id="name"
+        type="text"
+        v-model="register.name"
+        required />
+    </div>
+
+    <div>
+      <label for="surname">Прізвище</label>
+      <input
+        name="surname"
+        id="surname"
+        type="text"
+        v-model="register.surname"
+        required />
+    </div>
+
+    <div>
+      <label for="phone">Номер телефону</label>
+      <input
+        class="tel"
+        name="phone"
+        id="phone"
+        type="tel"
+        placeholder="+38 (0ХХ) ХХХ-ХХ-ХХ"
+        v-model="register.phone"
+        required />
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input
+        name="email"
+        id="email"
+        type="email"
+        v-model="register.email"
+        required />
+    </div>
+
+    <div>
+      <label for="password">Пароль</label>
+      <input
+        name="password"
+        id="password"
+        type="password"
+        v-model="register.password"
+        required />
+    </div>
+  </ModalAuth>
+
+  <ModalAuth
+    title="Увійти до кабінету"
+    submit="Увійти"
+    v-if="showLogin"
+    @close="showLogin = false">
+    <div>
+      <label for="email">Логін або email</label>
+      <input
+        name="email"
+        id="email"
+        type="email"
+        v-model="login.emailOrLogin"
+        required />
+    </div>
+
+    <div>
+      <label for="password">Пароль</label>
+      <input
+        name="password"
+        id="password"
+        type="password"
+        v-model="login.password"
+        required />
+    </div>
+  </ModalAuth>
 </template>
 
 <script>

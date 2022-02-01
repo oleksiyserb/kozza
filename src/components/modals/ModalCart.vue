@@ -346,6 +346,17 @@ export default {
   min-width: 320px;
   width: 890px;
 
+  @media (max-width: 1024px) {
+    width: auto;
+  }
+
+  @media (max-width: 425px) {
+    height: 100vh;
+    border-radius: 0px;
+    margin: 0;
+    padding: 1em;
+  }
+
   &__head {
     position: relative;
     margin-bottom: 1em;
@@ -412,15 +423,17 @@ export default {
 
   &__buttons {
     display: flex;
-    margin: 0 -1.375em;
 
     > button {
       font-family: var(--font-fourthary);
       flex-grow: 1;
-      padding: 1rem 0;
+      padding: 1rem;
       border-radius: 10px;
       font-size: 1.375rem;
-      margin: 0 1.375rem;
+
+      + button {
+        margin-left: 1.375em;
+      }
     }
 
     > button:nth-child(1) {
@@ -485,6 +498,16 @@ export default {
       align-items: flex-end;
       justify-content: space-between;
       font-size: 1.125rem;
+    }
+  }
+
+  &__picture {
+    > img {
+      width: 161px;
+
+      @media (max-width: 768px) {
+        width: 120px;
+      }
     }
   }
 
