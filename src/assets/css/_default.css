@@ -17,6 +17,7 @@
   --link-not-active: hsl(0, 32%, 71%);
   --primary-color: 0, 47%, 96%;
   --primary-transparent: hsla(var(--primary-color), 0.8);
+	--other-color: hsl(0, 32%, 71%);
 
 	@media (max-width: 425px) {
 		font-size: .875rem;

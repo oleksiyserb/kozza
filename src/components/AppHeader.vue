@@ -159,7 +159,7 @@
           </button>
           <ul class="header__icons">
             <li>
-              <button type="button">
+              <button type="button" @click="cart = !cart">
                 <svg
                   width="26"
                   height="27"
@@ -255,10 +255,11 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    <modal-search v-if="search" @search="search = !search" />
+    <!-- Modals -->
+    <ModalCart v-if="cart" @close="cart = false" />
+    <ModalSearch v-if="search" @close="search = !search" />
 
-    <modal-auth
+    <ModalAuth
       title="Реєстрація"
       submit="Зареєструватися"
       v-if="showRegister"
@@ -314,9 +315,9 @@
           v-model="register.password"
           required />
       </div>
-    </modal-auth>
+    </ModalAuth>
 
-    <modal-auth
+    <ModalAuth
       title="Увійти до кабінету"
       submit="Увійти"
       v-if="showLogin"
@@ -340,20 +341,22 @@
           v-model="login.password"
           required />
       </div>
-    </modal-auth>
+    </ModalAuth>
   </header>
 </template>
 
 <script>
 import ModalAuth from "./modals/ModalAuth.vue";
 import ModalSearch from "./modals/ModalSearch.vue";
+import ModalCart from "./modals/ModalCart.vue";
 
 export default {
   name: "app-header",
 
   components: {
     ModalAuth,
-    ModalSearch
+    ModalSearch,
+    ModalCart
   },
 
   data() {
@@ -363,6 +366,7 @@ export default {
       showRegister: false,
       search: false,
       showLogin: false,
+      cart: false,
 
       register: {
         name: "",

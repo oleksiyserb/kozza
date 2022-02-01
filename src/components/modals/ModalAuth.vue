@@ -1,33 +1,31 @@
 <template>
-  <div class="modal" @click="$emit('close')">
-    <div class="modal__wrap">
-      <div class="modal__auth" @click.stop>
-        <button class="modal__close" @click="$emit('close')">
-          <img src="../../assets/img/icons/close.svg" alt="close" />
-        </button>
-        <h1>{{ title }}</h1>
-        <div class="modal__networks">
-          <a href="#"
-            ><img src="../../assets/img/icons/google.svg" alt="google"
-          /></a>
-          <a href="#"
-            ><img src="../../assets/img/icons/facebook.svg" alt="facebook"
-          /></a>
-        </div>
-        <form method="POST" action="/" class="modal__inputs">
-          <slot></slot>
-
-          <button type="submit">{{ submit }}</button>
-        </form>
+  <ModalWrapper @close="$emit('close')">
+    <div class="auth__wrapper" @click.stop>
+      <button class="auth__close" @click="$emit('close')">
+        <img src="../../assets/img/icons/close.svg" alt="close" />
+      </button>
+      <h1>{{ title }}</h1>
+      <div class="auth__networks">
+        <a href="#"
+          ><img src="../../assets/img/icons/google.svg" alt="google"
+        /></a>
+        <a href="#"
+          ><img src="../../assets/img/icons/facebook.svg" alt="facebook"
+        /></a>
       </div>
+      <form method="POST" action="/" class="auth__inputs">
+        <slot></slot>
+
+        <button type="submit">{{ submit }}</button>
+      </form>
     </div>
-  </div>
+  </ModalWrapper>
 </template>
 
 <script>
+import ModalWrapper from "./ModalWrapper.vue";
 export default {
   name: "modal-auth",
-
   props: {
     title: {
       type: String,
@@ -36,33 +34,18 @@ export default {
     submit: {
       type: String,
       required: true
-    },
-    register: {
-      type: Boolean,
-      required: true
     }
   },
-
   emits: {
     close: null
-  }
+  },
+  components: { ModalWrapper }
 };
 </script>
 
 <style lang="postcss" scoped>
-.modal {
-  background-color: var(--dark-transparent);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__auth {
+.auth {
+  &__wrapper {
     border-radius: 10px;
     box-shadow: 0px 4px 4px var(--dark-transparent);
     background-color: hsl(var(--primary-color));

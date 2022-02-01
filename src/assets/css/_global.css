@@ -1,65 +1,69 @@
 .hidden {
-	visibility: hidden;
+  visibility: hidden;
+}
+
+strong {
+  font-weight: bold;
 }
 
 a {
-	> svg > circle {
-		transition: filter 0.2s;
-	}
+  > svg > circle {
+    transition: filter 0.2s;
+  }
 
-	&:hover > svg > circle {
-		filter: drop-shadow(0px 0px 10px var(--link));
-	}
+  &:hover > svg > circle {
+    filter: drop-shadow(0px 0px 10px var(--link));
+  }
 }
 
 .title {
-	text-align: center;
-	font-size: 2.5rem;
-	font-family: var(--font-secondary);
-	color: var(--link);
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--font-secondary);
+  color: var(--link);
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .background-image {
-	position: absolute;
-	z-index: -1;
-	user-select: none;
+  position: absolute;
+  z-index: -1;
+  user-select: none;
 }
 
 .swiper-pagination-bullet {
-	background: var(--link-clicked);
+  background: var(--link-clicked);
 }
 
 .swiper-pagination-bullet-active {
-	background: var(--link);
+  background: var(--link);
 }
 
 .button {
-	font-family: var(--font-fourthary);
-	font-size: 1.375rem;
-	font-weight: 600;
-	border-radius: 10px;
-	padding: 0.875rem 6.875rem;
-	cursor: pointer;
-	margin: 1em 0;
+  font-family: var(--font-fourthary);
+  font-size: 1.375rem;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.875rem 6.875rem;
+  cursor: pointer;
+  margin: 1em 0;
 
-	&-fill {
-		border: none;
-		background-color: var(--link);
-		color: var(--light);
-		transition: box-shadow 0.2s ease-in-out;
-	
-		&:hover {
-			box-shadow: 0px 0px 4px var(--link);
-		}
-	}
+  &-fill {
+    border: none;
+    background-color: var(--link);
+    color: var(--light);
+    transition: box-shadow 0.2s ease-in-out;
 
-	&-outline {
-		border: 1px solid var(--link);
-		background-color: transparent;
-		color: var(--link);
-	}
+    &:hover {
+      box-shadow: 0px 0px 4px var(--link);
+    }
+  }
+
+  &-outline {
+    border: 1px solid var(--link);
+    background-color: transparent;
+    color: var(--link);
+  }
 }
