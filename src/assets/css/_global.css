@@ -21,6 +21,7 @@ a {
   font-size: 2.5rem;
   font-family: var(--font-secondary);
   color: var(--link);
+  margin-bottom: 1.875rem;
 }
 
 .flex {
@@ -66,4 +67,10 @@ a {
     background-color: transparent;
     color: var(--link);
   }
+}
+
+div.product-collections__slider {
+  overflow: visible;
+  padding-bottom: 5em;
+  user-select: none;
 }

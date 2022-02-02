@@ -396,7 +396,7 @@ export default {
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: var(--other-color);
+      background-color: var(--link-not-active);
       border: 3px solid transparent;
       border-radius: 10px;
       background-clip: content-box;
@@ -551,7 +551,7 @@ export default {
       position: absolute;
       right: 0;
       top: 0;
-      background-color: var(--other-color);
+      background-color: var(--link-not-active);
       padding: 0.625em;
       box-shadow: 5px 5px 10px var(--dark-transparent);
       width: 185px;

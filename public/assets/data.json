@@ -1,0 +1,234 @@
+{
+  "collections": [
+    {
+      "id": 1,
+      "title": "Basic",
+      "image": "img/product.png"
+    },
+    {
+      "id": 2,
+      "title": "Lace",
+      "image": "img/product-2.png"
+    },
+    {
+      "id": 3,
+      "title": "Flowers",
+      "image": "img/product-3.png"
+    },
+    {
+      "id": 4,
+      "title": "Fantastic",
+      "image": "img/product.png"
+    },
+    {
+      "id": 5,
+      "title": "Epic",
+      "image": "img/product-2.png"
+    },
+    {
+      "id": 6,
+      "title": "Boolean",
+      "image": "img/product-3.png"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Timbaland",
+      "description": "Мереживний бралет з широким поясом бра, зручний в посадці та комфортний у носінні. Чашка ззовні з еластичного мережива, а зсередини на сітчастій підкладці — надає підтримку та фіксацію грудей.",
+      "size": ["65A", "65B", "65C", "65D"],
+      "availableInventory": 1000,
+      "price": 500,
+      "image": "img/black.png",
+      "variants": [
+        {
+          "id": 1,
+          "hashColor": "#000",
+          "images": ["img/black.png", "img/black-2.png"]
+        },
+        {
+          "id": 2,
+          "hashColor": "#FFF",
+          "images": ["img/white.png", "img/white-2.png"]
+        },
+        {
+          "id": 3,
+          "hashColor": "#F00",
+          "images": ["img/red.png", "img/red-2.png"]
+        }
+      ],
+      "characteristic": "Lorem ipsum dolor sit amet.",
+      "careRecommendations": "Recommendations",
+      "delivery": "Delivery",
+      "fitting": "Fitting",
+      "payment": "Payment",
+      "views": "Relational database",
+      "raiting": 4
+    },
+    {
+      "id": 2,
+      "title": "Бюстгальтер \"Queen\"",
+      "description": "Мереживний бралет з широким поясом бра, зручний в посадці та комфортний у носінні. Чашка ззовні з еластичного мережива, а зсередини на сітчастій підкладці — надає підтримку та фіксацію грудей.",
+      "size": ["65A", "65B", "65C", "65D"],
+      "availableInventory": 1000,
+      "price": 340,
+      "image": "img/black.png",
+      "variants": [
+        {
+          "id": 1,
+          "hashColor": "#000",
+          "images": ["img/black.png", "img/black-2.png"]
+        },
+        {
+          "id": 2,
+          "hashColor": "#FFF",
+          "images": ["img/white.png", "img/white-2.png"]
+        },
+        {
+          "id": 3,
+          "hashColor": "#F00",
+          "images": ["img/red.png", "img/red-2.png"]
+        }
+      ],
+      "characteristic": "Lorem ipsum dolor sit amet.",
+      "careRecommendations": "Recommendations",
+      "delivery": "Delivery",
+      "fitting": "Fitting",
+      "payment": "Payment",
+      "views": "Relational database",
+      "raiting": 2
+    },
+    {
+      "id": 3,
+      "title": "Бюстгальтер \"Aerosmith\"",
+      "description": "Мереживний бралет з широким поясом бра, зручний в посадці та комфортний у носінні. Чашка ззовні з еластичного мережива, а зсередини на сітчастій підкладці — надає підтримку та фіксацію грудей.",
+      "size": ["65A", "65B", "65C", "65D"],
+      "availableInventory": 1000,
+      "price": 450,
+      "image": "img/black.png",
+      "variants": [
+        {
+          "id": 1,
+          "hashColor": "#000",
+          "images": ["img/black.png", "img/black-2.png"]
+        },
+        {
+          "id": 2,
+          "hashColor": "#FFF",
+          "images": ["img/white.png", "img/white-2.png"]
+        },
+        {
+          "id": 3,
+          "hashColor": "#F00",
+          "images": ["img/red.png", "img/red-2.png"]
+        }
+      ],
+      "characteristic": "Lorem ipsum dolor sit amet.",
+      "careRecommendations": "Recommendations",
+      "delivery": "Delivery",
+      "fitting": "Fitting",
+      "payment": "Payment",
+      "views": "Relational database",
+      "raiting": 5
+    },
+    {
+      "id": 4,
+      "title": "Timbaland",
+      "description": "Мереживний бралет з широким поясом бра, зручний в посадці та комфортний у носінні. Чашка ззовні з еластичного мережива, а зсередини на сітчастій підкладці — надає підтримку та фіксацію грудей.",
+      "size": ["65A", "65B", "65C", "65D"],
+      "availableInventory": 1000,
+      "price": 500,
+      "image": "img/black.png",
+      "variants": [
+        {
+          "id": 1,
+          "hashColor": "#000",
+          "images": ["img/black.png", "img/black-2.png"]
+        },
+        {
+          "id": 2,
+          "hashColor": "#FFF",
+          "images": ["img/white.png", "img/white-2.png"]
+        },
+        {
+          "id": 3,
+          "hashColor": "#F00",
+          "images": ["img/red.png", "img/red-2.png"]
+        }
+      ],
+      "characteristic": "Lorem ipsum dolor sit amet.",
+      "careRecommendations": "Recommendations",
+      "delivery": "Delivery",
+      "fitting": "Fitting",
+      "payment": "Payment",
+      "views": "Relational database",
+      "raiting": 4
+    },
+    {
+      "id": 5,
+      "title": "Бюстгальтер \"Queen\"",
+      "description": "Мереживний бралет з широким поясом бра, зручний в посадці та комфортний у носінні. Чашка ззовні з еластичного мережива, а зсередини на сітчастій підкладці — надає підтримку та фіксацію грудей.",
+      "size": ["65A", "65B", "65C", "65D"],
+      "availableInventory": 1000,
+      "price": 340,
+      "image": "img/black.png",
+      "variants": [
+        {
+          "id": 1,
+          "hashColor": "#000",
+          "images": ["img/black.png", "img/black-2.png"]
+        },
+        {
+          "id": 2,
+          "hashColor": "#FFF",
+          "images": ["img/white.png", "img/white-2.png"]
+        },
+        {
+          "id": 3,
+          "hashColor": "#F00",
+          "images": ["img/red.png", "img/red-2.png"]
+        }
+      ],
+      "characteristic": "Lorem ipsum dolor sit amet.",
+      "careRecommendations": "Recommendations",
+      "delivery": "Delivery",
+      "fitting": "Fitting",
+      "payment": "Payment",
+      "views": "Relational database",
+      "raiting": 2
+    },
+    {
+      "id": 6,
+      "title": "Бюстгальтер \"Aerosmith\"",
+      "description": "Мереживний бралет з широким поясом бра, зручний в посадці та комфортний у носінні. Чашка ззовні з еластичного мережива, а зсередини на сітчастій підкладці — надає підтримку та фіксацію грудей.",
+      "size": ["65A", "65B", "65C", "65D"],
+      "availableInventory": 1000,
+      "price": 450,
+      "image": "img/black.png",
+      "variants": [
+        {
+          "id": 1,
+          "hashColor": "#000",
+          "images": ["img/black.png", "img/black-2.png"]
+        },
+        {
+          "id": 2,
+          "hashColor": "#FFF",
+          "images": ["img/white.png", "img/white-2.png"]
+        },
+        {
+          "id": 3,
+          "hashColor": "#F00",
+          "images": ["img/red.png", "img/red-2.png"]
+        }
+      ],
+      "characteristic": "Lorem ipsum dolor sit amet.",
+      "careRecommendations": "Recommendations",
+      "delivery": "Delivery",
+      "fitting": "Fitting",
+      "payment": "Payment",
+      "views": "Relational database",
+      "raiting": 5
+    }
+  ]
+}
