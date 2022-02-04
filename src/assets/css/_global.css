@@ -74,3 +74,32 @@ div.product-collections__slider {
   padding-bottom: 5em;
   user-select: none;
 }
+
+.breadcrumbs {
+  margin: 1.25em 0;
+  
+  > ul {
+    display: flex;
+
+    > li {
+      > a {
+        color: hsl(var(--dark));
+      }
+
+      > span {
+        margin: 0 0.5em;
+        font-weight: bold;
+      }
+    }
+
+    > li:nth-last-child(1) {
+      > a {
+        color: var(--blocked-color);
+      }
+
+      > span {
+        display: none;
+      }
+    }
+  }
+}

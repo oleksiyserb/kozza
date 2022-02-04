@@ -12,9 +12,9 @@
                 <img src="../assets/img/icons/close.svg" alt="close" />
               </button>
               <div class="header__burger-head">
-                <a href="/" class="header__logo">
+                <router-link :to="{ name: 'Main' }" class="header__logo">
                   <img src="../assets/img/icons/logo.svg" alt="logo" />
-                </a>
+                </router-link>
                 <ul class="header__burger-icons">
                   <li>
                     <button type="button">
@@ -88,7 +88,9 @@
                   </li>
                 </ul>
               </div>
-              <ul class="header__burger-links">
+              <ul
+                class="header__burger-links"
+                v-if="this.$route.name != 'Catalog'">
                 <li><a href="#">Аксесуари</a></li>
                 <li><a href="#">Бюстгальтери</a></li>
                 <li><a href="#">Комплекти</a></li>
@@ -102,14 +104,16 @@
                 <li><a href="#">Оптові закупівлі</a></li>
                 <li><a href="#">Про нас</a></li>
                 <li><a href="#">Вакансії</a></li>
-                <li><a href="#">Каталог</a></li>
+                <li>
+                  <router-link :to="{ name: 'Catalog' }">Каталог</router-link>
+                </li>
                 <li><a href="#">Колекції</a></li>
               </ul>
             </div>
           </div>
-          <a href="/" class="header__logo">
+          <router-link :to="{ name: 'Main' }" class="header__logo">
             <img src="../assets/img/icons/logo.svg" alt="logo" />
-          </a>
+          </router-link>
         </div>
         <div class="header__instruments">
           <form action="/" class="header__search">
@@ -246,7 +250,7 @@
         </div>
       </div>
       <div class="header__body">
-        <ul class="header__links">
+        <ul class="header__links" v-if="this.$route.name != 'Catalog'">
           <li><a href="#">Комплекти</a></li>
           <li><a href="#">Бюстгальтери</a></li>
           <li><a href="#">Аксесуари</a></li>
@@ -422,6 +426,11 @@ export default {
 
   &__instruments {
     display: flex;
+  }
+
+  &__body {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
   }
 
   &__burger {
@@ -695,7 +704,6 @@ export default {
     display: flex;
     padding: 1.1875em 0;
     margin: 0;
-    border-top: 1px solid var(--border-color);
     justify-content: space-between;
 
     @media (max-width: 425px) {

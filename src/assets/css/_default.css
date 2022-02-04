@@ -1,7 +1,7 @@
 :root {
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-	--font-primary: "Futura-book", sans-serif;
+  --font-primary: "Futura-book", sans-serif;
   --font-secondary: "Cormorant";
   --font-thirdary: "Futura-medium", sans-serif;
   --font-fourthary: "Futura-demi", sans-serif;
@@ -12,50 +12,76 @@
   --darkest-transparent: hsla(var(--dark), 0.5);
   --box-shadow: hsla(var(--dark), 0.25);
   --border-color: hsl(0, 0%, 28%);
+  --blocked-color: hsl(0, 0%, 64%);
   --link: hsl(352, 77%, 60%);
   --link-clicked: hsl(352, 68%, 46%);
   --link-not-active: hsl(0, 32%, 71%);
   --primary-color: 0, 47%, 96%;
   --primary-transparent: hsla(var(--primary-color), 0.8);
 
-	@media (max-width: 425px) {
-		font-size: .875rem;
-	}
+  @media (max-width: 425px) {
+    font-size: 0.875rem;
+  }
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-	background-color: hsl(var(--primary-color));
+  background-color: hsl(var(--primary-color));
+}
+
+#app {
+	display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  /* Щоб займав залишившийся простір */
+  flex-grow: 1;
+}
+
+footer {
+  /* Щоб footer не зменшувався */
+  flex-shrink: 0;
 }
 
 a {
-	font-family: var(--font-primary);
-	font-weight: 400;
-	text-decoration: none;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  text-decoration: none;
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: var(--font-secondary);
-	font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-secondary);
+  font-weight: 400;
 }
 
-img, svg {
-	display: block;
+img,
+svg {
+  display: block;
 }
 
 .container {
-	max-width: 1280px;
-	margin: 0 auto;
-	width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 90%;
 
-	&.grid {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		gap: 1rem;
-	}
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
 }

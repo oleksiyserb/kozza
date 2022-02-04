@@ -1,11 +1,20 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Main from "../views/MainView.vue";
 
 const routes = [
   {
     path: "/",
-    name: "main",
-    component: Main
+    name: "Main",
+    component: () => import("../views/MainView.vue")
+  },
+  {
+    path: "/catalog",
+    name: "Catalog",
+    component: () => import("../views/CatalogView.vue")
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: () => import("../views/NotFound.vue")
   }
 ];
 
