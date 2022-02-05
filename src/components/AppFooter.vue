@@ -9,7 +9,11 @@
         <ul>
           <li><a href="/link">Доставка та оплата</a></li>
           <li><a href="/link">Питання і відповіді</a></li>
-          <li><a href="/link">Розмірна таблиця</a></li>
+          <li>
+            <router-link :to="{ name: 'SizeTable' }"
+              >Розмірна таблиця</router-link
+            >
+          </li>
           <li><a href="/link">Оптові закупівлі</a></li>
         </ul>
       </div>

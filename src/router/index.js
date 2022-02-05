@@ -12,6 +12,11 @@ const routes = [
     component: () => import("../views/CatalogView.vue")
   },
   {
+    path: "/size-table",
+    name: "SizeTable",
+    component: () => import("../views/SizeTableView.vue")
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("../views/NotFound.vue")
