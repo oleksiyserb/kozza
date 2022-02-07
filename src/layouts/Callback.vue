@@ -4,6 +4,11 @@
       <div class="container">
         <div class="header__head">
           <nav class="header__brand">
+            <BurgerMenu
+              @open="burgerList = !burgerList"
+              @close="burgerList = false"
+              :burgerList="burgerList" />
+
             <router-link :to="{ name: 'Main' }" class="header__logo">
               <img src="../assets/img/icons/logo.svg" alt="logo" />
             </router-link>
@@ -19,8 +24,15 @@
 </template>
 
 <script>
+import BurgerMenu from "@/components/BurgerMenu.vue";
 export default {
-  name: "Callback"
+  name: "Callback",
+  components: { BurgerMenu },
+  data() {
+    return {
+      burgerList: false
+    };
+  }
 };
 </script>
 
@@ -28,6 +40,15 @@ export default {
 .header {
   &__head {
     border-bottom: 1px solid var(--border-color);
+
+    > a {
+      color: hsl(var(--dark));
+      font-size: 1.125rem;
+    }
+  }
+
+  &__brand {
+    display: flex;
   }
 }
 </style>
