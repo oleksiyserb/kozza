@@ -7,14 +7,22 @@
       <div class="footer__help">
         <h3>Допомога</h3>
         <ul>
-          <li><a href="/link">Доставка та оплата</a></li>
+          <li>
+            <router-link :to="{ name: 'DeliveryPayment' }"
+              >Доставка та оплата</router-link
+            >
+          </li>
           <li><a href="/link">Питання і відповіді</a></li>
           <li>
             <router-link :to="{ name: 'SizeTable' }"
               >Розмірна таблиця</router-link
             >
           </li>
-          <li><a href="/link">Оптові закупівлі</a></li>
+          <li>
+            <router-link :to="{ name: 'Wholesale' }"
+              >Оптові закупівлі</router-link
+            >
+          </li>
         </ul>
       </div>
       <div class="footer__subscribe">

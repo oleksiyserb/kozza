@@ -1,19 +1,22 @@
 <template>
-  <AppHeader />
-  <main>
-    <router-view />
-  </main>
-  <AppFooter />
+  <component :is="layout">
+    <router-view :key="$route.fullPath" />
+  </component>
 </template>
 
 <script>
-import AppHeader from "./components/AppHeader.vue";
-import AppFooter from "./components/AppFooter.vue";
+import Default from "./layouts/Default.vue";
+import Callback from "./layouts/Callback.vue";
 
 export default {
   components: {
-    AppHeader,
-    AppFooter
+    Default,
+    Callback
+  },
+  computed: {
+    layout() {
+      return this.$route.meta.layout || "Default";
+    }
   }
 };
 </script>

@@ -2,11 +2,11 @@
   <header class="header">
     <div class="container">
       <div class="header__head">
-        <div class="header__brand">
+        <nav class="header__brand">
           <div class="header__menu">
-            <a @click="openBurgerList" href="#" class="header__burger">
+            <button @click="openBurgerList" class="header__burger">
               <span></span>
-            </a>
+            </button>
             <div class="header__burger-menu" :class="{ open: burgerList }">
               <button class="header__burger-close" @click="burgerList = false">
                 <img src="../assets/img/icons/close.svg" alt="close" />
@@ -97,11 +97,23 @@
                 <li><a href="#">Трусики</a></li>
               </ul>
               <ul class="header__burger-body">
-                <li><a href="#">Доставка та оплата</a></li>
+                <li>
+                  <router-link :to="{ name: 'DeliveryPayment' }"
+                    >Доставка та оплата</router-link
+                  >
+                </li>
                 <li><a href="#">Контакти</a></li>
                 <li><a href="#">Питання і відповіді</a></li>
-                <li><a href="#">Розмірна таблиця</a></li>
-                <li><a href="#">Оптові закупівлі</a></li>
+                <li>
+                  <router-link :to="{ name: 'SizeTable' }"
+                    >Розмірна таблиця</router-link
+                  >
+                </li>
+                <li>
+                  <router-link :to="{ name: 'Wholesale' }"
+                    >Оптові закупівлі</router-link
+                  >
+                </li>
                 <li><a href="#">Про нас</a></li>
                 <li><a href="#">Вакансії</a></li>
                 <li>
@@ -114,7 +126,7 @@
           <router-link :to="{ name: 'Main' }" class="header__logo">
             <img src="../assets/img/icons/logo.svg" alt="logo" />
           </router-link>
-        </div>
+        </nav>
         <div class="header__instruments">
           <form action="/" class="header__search">
             <input
@@ -250,7 +262,7 @@
         </div>
       </div>
       <div class="header__body">
-        <ul class="header__links" v-if="this.$route.name != 'Catalog'">
+        <ul class="header__links">
           <li><a href="#">Комплекти</a></li>
           <li><a href="#">Бюстгальтери</a></li>
           <li><a href="#">Аксесуари</a></li>
@@ -386,7 +398,6 @@ export default {
       }
     };
   },
-
   methods: {
     openAuthList() {
       this.authList = !this.authList;
@@ -397,21 +408,26 @@ export default {
       this.burgerList = !this.burgerList;
       this.authList = false;
     }
+  },
+  watch: {
+    $route() {
+      this.burgerList = false;
+    }
   }
 };
 </script>
 
 <style lang="postcss" scoped>
 .header {
-  &__head {
+  :global(&__head) {
     display: flex;
     justify-content: space-between;
-    margin-top: 2.125em;
-    margin-bottom: 1.875em;
+    padding-top: 2.125em;
+    padding-bottom: 1.875em;
     align-items: center;
   }
 
-  &__logo > img {
+  :global(&__logo > img) {
     height: 30px;
   }
 
@@ -435,6 +451,7 @@ export default {
 
   &__burger {
     width: 30px;
+    border: none;
     position: relative;
 
     &-menu {
