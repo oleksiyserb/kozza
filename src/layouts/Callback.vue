@@ -50,5 +50,16 @@ export default {
   &__brand {
     display: flex;
   }
+
+  &__logo {
+    > img {
+      display: block;
+      height: 26px;
+
+      @media (max-width: 425px) {
+        height: 20px;
+      }
+    }
+  }
 }
 </style>

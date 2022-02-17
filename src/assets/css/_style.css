@@ -590,7 +590,7 @@
     @media (max-width: 425px) {
       padding: 2.14rem 1.43rem;
     }
-    
+
     > h1 {
       font-size: 2.5rem;
       margin-bottom: 2.25rem;
@@ -618,7 +618,7 @@
   justify-content: center;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -720,9 +720,152 @@
 
       > p {
         line-height: 1.25rem;
-  
+
         + p {
           margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.ordering {
+  &__wrapper {
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info > header > h1 {
+    font-size: 1.875rem;
+    font-family: var(--font-primary);
+  }
+
+  &__content {
+    margin-top: 2.8125em;
+  }
+
+  &__list {
+    margin: 1em 0;
+
+    > .ordering__dropdown {
+      display: none;
+    }
+    &.open {
+      > .ordering__dropdown {
+        display: block;
+      }
+  
+      .ordering__title > label::before {
+        top: 5px;
+        transition: transform 0.5s;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__dropdown {
+    margin-left: 1.375em;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1em;
+
+      > label {
+        margin-left: 0.375em;
+        font-size: 1.125rem;
+        font-family: var(--font-primary);
+      }
+
+      > input[type="text"],
+      > input[type="tel"] {
+        border-radius: 0.625em;
+        border: 1px solid var(--border-color);
+        background-color: transparent;
+        padding: 0.3125em 0.625em;
+
+        &::placeholder {
+          font-size: 1.125rem;
+        }
+      }
+    }
+
+    > button {
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+
+  &__social-networks {
+    display: flex;
+    margin: 1em 0;
+
+    > li + li {
+      margin-left: 0.3125em;
+    }
+  }
+
+  &__title {
+    font-size: 1.5625rem;
+    font-family: var(--font-primary);
+    position: relative;
+
+    > label {
+      display: block;
+      cursor: pointer;
+      user-select: none;
+
+      &::before {
+        content: "";
+        cursor: pointer;
+        top: 12px;
+        right: 0;
+        position: absolute;
+        border: 0.3rem solid;
+        border-color: black transparent transparent;
+      }
+    }
+
+    > input {
+      visibility: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &:disabled + label {
+        color: var(--blocked-color);
+
+        &::before {
+          border-color: var(--blocked-color) transparent transparent;
+        }
+      }
+    }
+  }
+
+  &__radios {
+    > p {
+      font-size: 1.125rem;
+      font-family: var(--font-primary);
+    }
+
+    &-wrapper {
+      font-family: var(--font-primary);
+      
+      > div {
+        margin-top: 0.75em;
+        display: flex;
+
+        > input {
+          margin-right: 0.3125em;
+        }
+
+        p {
+          font-size: 1.125rem;
+        }
+
+        span {
+          color: var(--blocked-color);
         }
       }
     }

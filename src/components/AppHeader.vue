@@ -4,6 +4,8 @@
       <div class="header__head">
         <nav class="header__brand">
           <BurgerMenu
+            :authList="authList"
+            @auth="authList = !authList"
             @open="openBurgerList"
             @close="burgerList = false"
             :burgerList="burgerList" />
@@ -146,7 +148,7 @@
         </div>
       </div>
       <div class="header__body">
-        <ul class="header__links">
+        <ul>
           <li><a href="#">Комплекти</a></li>
           <li><a href="#">Бюстгальтери</a></li>
           <li><a href="#">Аксесуари</a></li>
@@ -311,10 +313,10 @@ export default {
     padding-top: 2.125em;
     padding-bottom: 1.875em;
     align-items: center;
-  }
 
-  :global(&__logo > img) {
-    height: 30px;
+    @media (max-width: 425px) {
+      border-bottom: 1px solid var(--border-color);
+    }
   }
 
   &__brand {
@@ -333,6 +335,22 @@ export default {
   &__body {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+
+    @media (max-width: 425px) {
+      display: none;
+    }
+
+    > ul {
+      display: flex;
+      padding: 1.1875em 0;
+      margin: 0;
+      justify-content: space-between;
+
+      > li > a {
+        font-size: 1.125rem;
+        color: hsl(var(--dark));
+      }
+    }
   }
 
   &__logo {
@@ -414,22 +432,6 @@ export default {
       > svg {
         transition: filter 0.5s;
       }
-    }
-  }
-
-  &__links {
-    display: flex;
-    padding: 1.1875em 0;
-    margin: 0;
-    justify-content: space-between;
-
-    @media (max-width: 425px) {
-      display: none;
-    }
-
-    > li > a {
-      font-size: 1.125rem;
-      color: hsl(var(--dark));
     }
   }
 }

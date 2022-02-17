@@ -8,7 +8,7 @@
         <img src="../assets/img/icons/close.svg" alt="close" />
       </button>
       <div class="burger__head">
-        <router-link :to="{ name: 'Main' }" class="header__logo">
+        <router-link :to="{ name: 'Main' }" class="burger__logo">
           <img src="../assets/img/icons/logo.svg" alt="logo" />
         </router-link>
         <ul class="burger__icons">
@@ -28,7 +28,7 @@
           </li>
 
           <li class="user">
-            <button type="button" @click="openAuthList">
+            <button type="button" @click="$emit('auth')">
               <svg
                 width="29"
                 height="26"
@@ -116,12 +116,11 @@ export default {
     burgerList: {
       type: Boolean,
       default: false
+    },
+    authList: {
+      type: Boolean,
+      default: false
     }
-  },
-  data() {
-    return {
-      authList: false
-    };
   }
 };
 </script>
@@ -198,7 +197,7 @@ export default {
 
     > li {
       + li {
-        margin-left: 1.57em;
+        margin-left: 0.5em;
       }
 
       > button {
@@ -253,6 +252,17 @@ export default {
     @media (max-width: 425px) {
       display: flex;
       justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    > img {
+      display: block;
+      height: 26px;
+
+      @media (max-width: 425px) {
+        height: 20px;
+      }
     }
   }
 
