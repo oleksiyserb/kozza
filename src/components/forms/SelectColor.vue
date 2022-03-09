@@ -1,5 +1,5 @@
 <template>
-  <div class="select" ref="state" data-state="">
+  <div class="select" ref="select" data-state="">
     <div class="select__title" ref="title" @click="toggleMenu"></div>
     <div class="select__content">
       <template v-for="variant in variants" :key="variant.id">
@@ -20,26 +20,14 @@
 </template>
 
 <script>
+import { select } from "@/mixins/select.js";
+
 export default {
+  mixins: [select],
   props: {
     variants: {
       type: Object,
       require: true
-    }
-  },
-
-  methods: {
-    toggleMenu() {
-      if ("active" === this.$refs.state.getAttribute("data-state")) {
-        this.$refs.state.setAttribute("data-state", "");
-      } else {
-        this.$refs.state.setAttribute("data-state", "active");
-      }
-    },
-
-    selectLabel(e) {
-      this.$refs.title.style.backgroundColor = e.target.style.backgroundColor;
-      this.$refs.state.setAttribute("data-state", "");
     }
   }
 };

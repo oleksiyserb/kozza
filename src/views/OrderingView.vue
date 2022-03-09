@@ -127,7 +127,16 @@
                       </label>
                     </div>
                   </div>
-                  <div class="ordering__selects"></div>
+                  <div class="ordering__selects">
+                    <div>
+                      <p>Місто</p>
+                      <SelectSingle :filter="false" />
+                    </div>
+                    <div>
+                      <p>Поштомат</p>
+                      <SelectSingle :filter="true" />
+                    </div>
+                  </div>
                 </div>
                 <button class="button button-fill">Далі</button>
               </form>
@@ -233,3 +242,14 @@
     </div>
   </section>
 </template>
+
+<script>
+import SelectSingle from "@/components/forms/SelectSingle.vue";
+
+export default {
+  name: "OrderingView",
+  components: {
+    SelectSingle
+  }
+};
+</script>
