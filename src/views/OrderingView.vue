@@ -129,12 +129,10 @@
                   </div>
                   <div class="ordering__selects">
                     <div>
-                      <p>Місто</p>
-                      <SelectSingle :filter="false" />
+                      <SelectSingle :filter="false" name="Місто" />
                     </div>
                     <div>
-                      <p>Поштомат</p>
-                      <SelectSingle :filter="true" />
+                      <SelectSingle :filter="true" name="Поштомат" />
                     </div>
                   </div>
                 </div>

@@ -1,15 +1,16 @@
 <template>
+  <p :class="$style.text">{{ name }}</p>
   <div class="select" ref="select" data-state="">
     <div
       class="select__title"
       @click="toggleMenu"
       ref="title"
       data-default="City 0">
-      Місто
+      {{ name }}
     </div>
     <div class="select__content">
       <template v-if="filter">
-        <input type="text" />
+        <input class="select__filter" type="text" />
       </template>
       <input
         id="city0"
@@ -17,7 +18,7 @@
         type="radio"
         name="singleSelect"
         checked />
-      <label for="city0" class="select__label">Місто</label>
+      <label for="city0" class="select__label">{{ name }}</label>
       <input
         id="city1"
         class="select__input"
@@ -63,7 +64,19 @@ export default {
       type: Boolean,
       required: true,
       default: false
+    },
+    name: {
+      type: String,
+      required: true
     }
   }
 };
 </script>
+
+<style lang="postcss" module>
+.text {
+  font-size: 1.125rem;
+  margin: 0.625rem 0 0.3125rem;
+  font-family: var(--font-primary);
+}
+</style>

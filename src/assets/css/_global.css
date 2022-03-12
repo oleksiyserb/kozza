@@ -435,3 +435,11 @@ div.product-collections__slider {
     border-top: 0 solid #c7ccd160;
   }
 }
+.select__filter {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  margin: 0.5em 1em;
+  padding: 0.2em;
+  font-size: 1rem;
+  width: 88%;
+}
