@@ -186,6 +186,7 @@ div.product-collections__slider {
       > h2 {
         font-size: 1.125rem;
         font-family: var(--font-primary);
+        margin-right: 1rem;
       }
     }
 
@@ -206,7 +207,7 @@ div.product-collections__slider {
       width: 161px;
 
       @media (max-width: 768px) {
-        width: 120px;
+        width: 95px;
       }
     }
   }
@@ -255,6 +256,7 @@ div.product-collections__slider {
       padding: 0.625em;
       box-shadow: 5px 5px 10px var(--dark-transparent);
       width: 185px;
+      z-index: 2;
 
       > li {
         + li {
@@ -342,6 +344,11 @@ div.product-collections__slider {
       background: url(../img/icons/radio.svg) 0 0 no-repeat;
     }
   }
+}
+
+.radio-card  {
+  display: flex;
+  flex-direction: column;
 }
 
 .select {

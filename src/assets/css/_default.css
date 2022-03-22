@@ -16,6 +16,7 @@
   --link: hsl(352, 77%, 60%);
   --link-clicked: hsl(352, 68%, 46%);
   --link-not-active: hsl(0, 32%, 71%);
+  --light-background: hsl(0, 54%, 91%);
   --primary-color: 0, 47%, 96%;
   --primary-transparent: hsla(var(--primary-color), 0.8);
 
